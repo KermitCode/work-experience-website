@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="refresh" content="{{refresh}};URL={{url}}" />
+<title>名企工作网提示页</title>
+<script type="text/javascript" defer="defer"><!--
+var duration={{refresh}}*1000;var timer=null;var endTime = new Date().getTime() + duration + 100;function interval(){
+var n=(endTime-new Date().getTime())/1000;if(n<0) return;document.getElementById("miao").innerHTML = n.toFixed(1);setTimeout(interval, 100); }
+window.onload=function(){timer=setTimeout("window.location.href='{{url}}'", duration);interval(); } 
+function block(oEvent){if(window.event)oEvent=window.event;if(oEvent.button==2)alert('欢迎来到名企工作网');}
+document.onmousedown=block;
+//-->
+</script>
+<style type="text/css">
+body{width:800px;margin:0 auto;height:100%;font-size:12px;text-align:center;}
+.logo{padding-top:35px;margin-left:20px;text-align:left;}
+.top{height:100px;border-bottom:4px inset #9C0;}
+.main{height:350px;}
+.left{float:left;width:500px;line-height:30px;}
+.lefttop{height:80px;margin-bottom:10px;}
+.mess{width:100%;height:100px;border:1px solid #CCC;background-color:#eee;padding-top:30px;}
+.right{float:right;width:200px;height:200px;margin-top:50px;margin-right:80px;}
+.right img{border:0px;width:200px;height:200px;}
+.bot{height:50px;text-align:center;line-height:18px;padding-top:8px;width:800px;border-top:1px solid #ddd;}
+.time{color:red;font-weight:bolder;display:inline;}
+</style>
+</head>
+<body>
+<div class="top">
+<div class="logo"><img src="../images/logo.gif" width="160" height="60" alt="名企工作网" /></div>
+</div>
+<div class="main">
+<div class="left">
+<div class="lefttop"></div>
+<div class="mess">
+{{message}}<br />
+<div class="time" id="miao">{{refresh}}</div>&nbsp;秒钟后页面将会自动跳转，如浏览器没有任何反应请 <a href="{{url}}">点击这里</a>
+</div>
+</div>
+<div class="right"><img src="../images/{{image}}" width='200' height='200'></div>
+</div>
+<div class="bot" id="bot">Copyright <span style="font-size:12px;font-family:Arial, Helvetica, sans-serif;" >&copy;</span> All Rights Reservedhttp://www.mqwork.com 鲁ICP备11016481号-1<br /> 
+Powered by kermit  2012 - 2020<br />
+名企工作网-友情信息页</div>
+</body>
+</html>
